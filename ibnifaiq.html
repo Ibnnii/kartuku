@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Digital</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- ====== EDIT DATA DI SINI SAJA ====== -->
+      <script>
+        const P = {
+          nama: "Ibni Faiq Athallah",
+          jurusan: "Teknik Informatika",
+          kampus: "Universitas Dinamika Bangsa",
+          angkatan: "2023",
+          foto: "ibnifaiq.jpg",
+          tagline: "Kreatif",
+          skill: [
+            "Data Analyst",
+            "Data Science",
+            "Programmer",
+            "Machine Learning",
+            "AI",
+          ],
+          proyek: [
+            {
+              judul: "WebGIS Kebakaran Kota Jambi",
+              ket: "Web visualisasi peta dengan marker dan informasi wilayah di Kota Jambi yang terbakar.",
+            },
+          ],
+          wa: "62895622073955",
+          email: "ibnifaiqathallah28@gmail.com",
+          links: [
+            {
+              label: "Lihat WebGIS Kebakaran Jambi",
+              url: "https://giskebakaranjambi.netlify.app/",
+            },
+            {
+              label: "LinkedIn",
+              url: "https://www.linkedin.com/in/ibni-faiq-athallah-0b02b8291",
+            },
+            { label: "Instagram", url: "https://instagram.com/nih_ibe" },
+          ],
+        };
+      </script>
+      <!-- ==================================== -->
+
+      <article class="id">
+        <div class="slot"></div>
+        <div class="chip"></div>
+        <div class="photo" id="photo"></div>
+        <h1 id="nama"></h1>
+        <p class="sub" id="sub"></p>
+        <p class="tagline" id="tagline"></p>
+      </article>
+
+      <section>
+        <h2>Skill</h2>
+        <div class="tags" id="skill"></div>
+      </section>
+      <section id="projSec">
+        <h2>Proyek</h2>
+        <div id="proj"></div>
+      </section>
+      <section>
+        <h2>Hubungi saya</h2>
+        <div class="links" id="kontak"></div>
+      </section>
+      <section>
+        <h2>Link</h2>
+        <div class="links" id="links"></div>
+      </section>
+
+      <footer>KartuKu.id · Smart ID Card Berbasis QR</footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

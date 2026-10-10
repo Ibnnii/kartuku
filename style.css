@@ -1,0 +1,191 @@
+:root {
+  --bg: #eef2f7;
+  --card: #fff;
+  --ink: #14213d;
+  --mute: #5b6784;
+  --line: #d8dfea;
+  --acc: #0e8f8f;
+  --acc-ink: #fff;
+  --tag: #ddf3f1;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    400 16px/1.55 system-ui,
+    sans-serif;
+}
+main {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+h1,
+h2 {
+  margin: 0;
+}
+.id {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 36px 20px 22px;
+  position: relative;
+  text-align: center;
+}
+.slot {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 56px;
+  height: 10px;
+  margin-left: -28px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.photo {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  background: var(--acc);
+  color: var(--acc-ink);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 40px;
+  overflow: hidden;
+  border: 4px solid var(--card);
+  box-shadow: 0 0 0 2px var(--acc);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h1 {
+  font-size: 28px;
+  line-height: 1.15;
+}
+.sub {
+  margin: 6px 0 0;
+  color: var(--mute);
+}
+.tagline {
+  margin: 14px 0 0;
+}
+section {
+  margin-top: 24px;
+}
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags span {
+  background: var(--tag);
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.proj {
+  border-left: 3px solid var(--acc);
+  padding: 2px 0 2px 12px;
+  margin-bottom: 12px;
+}
+.proj b {
+  display: block;
+}
+.proj span {
+  color: var(--mute);
+  font-size: 14px;
+}
+.links {
+  display: grid;
+  gap: 10px;
+}
+.btn {
+  display: block;
+  text-align: center;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+}
+.btn.main {
+  background: var(--acc);
+  color: var(--acc-ink);
+  border-color: var(--acc);
+  font-weight: 700;
+}
+.btn:hover {
+  border-color: var(--acc);
+}
+footer {
+  margin-top: 28px;
+  text-align: center;
+  color: var(--mute);
+  font-size: 13px;
+}
+
+/* border gradasi + bayangan, ikut warna aksen */
+.id {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(135deg, var(--acc), #fff0 45%, var(--acc)) border-box;
+  box-shadow: 0 12px 30px -14px var(--acc);
+}
+
+/* siku di pojok kiri atas dan kanan bawah */
+.id::before,
+.id::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 3px solid var(--acc);
+  pointer-events: none;
+}
+.id::before {
+  top: 14px;
+  left: 14px;
+  border-right: 0;
+  border-bottom: 0;
+  border-top-left-radius: 8px;
+}
+.id::after {
+  bottom: 14px;
+  right: 14px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom-right-radius: 8px;
+}
+
+/* chip emas */
+.chip {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 26px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f5d77a, #c9a227);
+  box-shadow: inset 0 0 0 1px #0002;
+}
